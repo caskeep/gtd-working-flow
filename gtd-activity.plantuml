@@ -4,7 +4,7 @@ start
 
 :stuff;
 
-if (Need Some Actions?) then (yes)
+if (Need Some Actions?) then (no)
     if (Rabbish?) then (yes)
         :Drop it to rabbish bin;
         stop
@@ -14,8 +14,21 @@ if (Need Some Actions?) then (yes)
     elseif (Is Incubate Plan?) then (yes)
         :Save to incubate list;
     endif
-elseif (No Need) then (yes)
-    :?;
+elseif (Need Action) then (yes)
+    if (Action can be done in 2 minutes?) then (yes)
+        :Just do it;
+        stop
+    elseif (Action need be done ASAP?) then (yes)
+        :add to one proper todo-list;
+        stop
+    elseif (Stuff is project?) then (yes)
+        :move to new project;
+        stop
+    elseif (stuff need to be assigned to others?) then (yes)
+        :move to todo-list;
+        :then move to waiting-list;
+        stop
+    endif
 endif
 
 stop
