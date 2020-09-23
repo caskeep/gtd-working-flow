@@ -1,0 +1,24 @@
+@startuml
+
+start
+
+:stuff;
+
+if (Need Some Actions?) then (yes)
+    if (Rabbish?) then (yes)
+        :Drop it to rabbish bin;
+        stop
+    elseif (Is Reference Data?) then (yes)
+        :Save to reference databsae;
+        stop
+    elseif (Is Incubate Plan?) then (yes)
+        :Save to incubate list;
+    endif
+elseif (No Need) then (yes)
+    :?;
+endif
+
+stop
+
+
+@enduml
